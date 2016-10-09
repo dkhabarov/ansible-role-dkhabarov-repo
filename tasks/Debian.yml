@@ -1,0 +1,16 @@
+---
+- name: install apt https transport
+  apt:
+    pkg: apt-transport-https
+
+- name: Add repo key
+  apt_key:
+    url: https://repo.saymon21-root.pro/pubkey.asc
+    state: "{{ dkhabarov_repo_state}}"
+
+- name: add repository
+  apt_repository:
+    repo: "deb [arch=amd64] https://repo.saymon21-root.pro/{{ ansible_distribution_release }} main"
+    filename: "dkhabarov"
+    state: "{{ dkhabarov_repo_state}}"
+
