@@ -3,7 +3,7 @@ Add my [personal deb repo](https://saymon21-root.pro/deb-repo/).
 
 ## Requirements
 
-apt-transport-https
+apt-transport-https - automate installed
 
 ## Installation
 
